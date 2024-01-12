@@ -1,19 +1,33 @@
-export default function Home() {
+import { request, gql } from 'graphql-request'
+
+export async function getServerSideProps() {
+  const query = gql`
+    {
+      frameworks {
+        id
+        name
+      }
+    }
+  `
+  const data = await request('http://localhost:3000/api/graphql', query)
+  const { frameworks } = data as any;
+
+  return {
+    props: {
+      frameworks,
+    },
+  }
+}
+
+
+export default function Home({ frameworks }) {
   return (
-    <main>
-      <div className="home">
-        <figure>
-          <img
-            src="https://static.octopuscdn.com/logos/logo.svg"
-            alt="Octopus Energy Logo"
-          />
-        </figure>
-        <h1>Welcome to the Octopus Energy Frontend code test!</h1>
-        <p>
-          Get started by visiting the <code>/product</code> URL and editing{" "}
-          <code>client/pages/product.js</code>
-        </p>
-      </div>
-    </main>
-  );
+    <div>
+      <ul>
+        {frameworks.map(f => (
+          <li key={f.id}>{f.name}</li>
+        ))}
+      </ul>
+    </div>
+  )
 }

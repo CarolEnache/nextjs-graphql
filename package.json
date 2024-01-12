@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn server & next dev",
-    "build": "next build",
+    "build": "build:nexus-typegen && next build",
     "start": "next start",
     "server": "yarn run json-graphql-server ../server/db.js --p 3001",
     "test": "jest"
