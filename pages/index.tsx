@@ -1,33 +1,31 @@
-import { request, gql } from 'graphql-request'
+import Link from 'next/link';
+
+import { createApolloClient } from "../graphql/apollo-client";
+import { GetAllProductsQuery } from '../graphql/queries';
 
 export async function getServerSideProps() {
-  const query = gql`
-    {
-      frameworks {
-        id
-        name
-      }
-    }
-  `
-  const data = await request('http://localhost:3000/api/graphql', query)
-  const { frameworks } = data as any;
+  const client = createApolloClient();
+  const { data } = await client.query({ query: GetAllProductsQuery });
 
   return {
     props: {
-      frameworks,
+      allProducts: data.allProducts,
     },
   }
 }
 
-
-export default function Home({ frameworks }) {
+export default function Home({ allProducts }) {
   return (
     <div>
-      <ul>
-        {frameworks.map(f => (
-          <li key={f.id}>{f.name}</li>
+      <div>
+        {allProducts.map((product) => (
+          <div key={product.id}>
+            <Link href={`/product/${product.id}`}>
+              <a>{product.brand}</a>
+            </Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

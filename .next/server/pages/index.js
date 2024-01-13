@@ -1,45 +1,298 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/index";
-exports.ids = ["pages/index"];
+exports.id = 405;
+exports.ids = [405];
 exports.modules = {
 
-/***/ "./pages/index.tsx":
-/*!*************************!*\
-  !*** ./pages/index.tsx ***!
-  \*************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
+/***/ 3696:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var graphql_request__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! graphql-request */ \"graphql-request\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([graphql_request__WEBPACK_IMPORTED_MODULE_1__]);\ngraphql_request__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\n\n\nasync function getServerSideProps() {\n    const query = graphql_request__WEBPACK_IMPORTED_MODULE_1__.gql`\n    {\n      frameworks {\n        id\n        name\n      }\n    }\n  `;\n    const data = await (0,graphql_request__WEBPACK_IMPORTED_MODULE_1__.request)(\"http://localhost:3000/api/graphql\", query);\n    const { frameworks  } = data;\n    return {\n        props: {\n            frameworks\n        }\n    };\n}\nfunction Home({ frameworks  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"ul\", {\n            children: frameworks.map((f)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"li\", {\n                    children: f.name\n                }, f.id, false, {\n                    fileName: \"/Users/carolenache/Desktop/next-graphql/client/pages/index.tsx\",\n                    lineNumber: 28,\n                    columnNumber: 11\n                }, this))\n        }, void 0, false, {\n            fileName: \"/Users/carolenache/Desktop/next-graphql/client/pages/index.tsx\",\n            lineNumber: 26,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/carolenache/Desktop/next-graphql/client/pages/index.tsx\",\n        lineNumber: 25,\n        columnNumber: 5\n    }, this);\n};\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQTtBQUE4QztBQUV2QyxlQUFlRSxrQkFBa0IsR0FBRztJQUN6QyxNQUFNQyxLQUFLLEdBQUdGLGdEQUFHLENBQUM7Ozs7Ozs7RUFPbEIsQ0FBQztJQUNELE1BQU1HLElBQUksR0FBRyxNQUFNSix3REFBTyxDQUFDLG1DQUFtQyxFQUFFRyxLQUFLLENBQUM7SUFDdEUsTUFBTSxFQUFFRSxVQUFVLEdBQUUsR0FBR0QsSUFBSTtJQUUzQixPQUFPO1FBQ0xFLEtBQUssRUFBRTtZQUNMRCxVQUFVO1NBQ1g7S0FDRjtDQUNGO0FBR2MsU0FBU0UsSUFBSSxDQUFDLEVBQUVGLFVBQVUsR0FBRSxFQUFFO0lBQzNDLHFCQUNFLDhEQUFDRyxLQUFHO2tCQUNGLDRFQUFDQyxJQUFFO3NCQUNBSixVQUFVLENBQUNLLEdBQUcsQ0FBQ0MsQ0FBQUEsQ0FBQyxpQkFDZiw4REFBQ0MsSUFBRTs4QkFBYUQsQ0FBQyxDQUFDRSxJQUFJO21CQUFiRixDQUFDLENBQUNHLEVBQUU7Ozs7d0JBQWUsQ0FDNUI7Ozs7O2dCQUNDOzs7OztZQUNELENBQ1A7Q0FDRiIsInNvdXJjZXMiOlsid2VicGFjazovL2Zyb250ZW5kLWNvZGUtdGVzdC8uL3BhZ2VzL2luZGV4LnRzeD8wN2ZmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHJlcXVlc3QsIGdxbCB9IGZyb20gJ2dyYXBocWwtcmVxdWVzdCdcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFNlcnZlclNpZGVQcm9wcygpIHtcbiAgY29uc3QgcXVlcnkgPSBncWxgXG4gICAge1xuICAgICAgZnJhbWV3b3JrcyB7XG4gICAgICAgIGlkXG4gICAgICAgIG5hbWVcbiAgICAgIH1cbiAgICB9XG4gIGBcbiAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcXVlc3QoJ2h0dHA6Ly9sb2NhbGhvc3Q6MzAwMC9hcGkvZ3JhcGhxbCcsIHF1ZXJ5KVxuICBjb25zdCB7IGZyYW1ld29ya3MgfSA9IGRhdGEgYXMgYW55O1xuXG4gIHJldHVybiB7XG4gICAgcHJvcHM6IHtcbiAgICAgIGZyYW1ld29ya3MsXG4gICAgfSxcbiAgfVxufVxuXG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWUoeyBmcmFtZXdvcmtzIH0pIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2PlxuICAgICAgPHVsPlxuICAgICAgICB7ZnJhbWV3b3Jrcy5tYXAoZiA9PiAoXG4gICAgICAgICAgPGxpIGtleT17Zi5pZH0+e2YubmFtZX08L2xpPlxuICAgICAgICApKX1cbiAgICAgIDwvdWw+XG4gICAgPC9kaXY+XG4gIClcbn0iXSwibmFtZXMiOlsicmVxdWVzdCIsImdxbCIsImdldFNlcnZlclNpZGVQcm9wcyIsInF1ZXJ5IiwiZGF0YSIsImZyYW1ld29ya3MiLCJwcm9wcyIsIkhvbWUiLCJkaXYiLCJ1bCIsIm1hcCIsImYiLCJsaSIsIm5hbWUiLCJpZCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/index.tsx\n");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "n": () => (/* binding */ createApolloClient)
+});
+
+// EXTERNAL MODULE: external "@apollo/client"
+var client_ = __webpack_require__(9114);
+;// CONCATENATED MODULE: ./constants.ts
+const END_POINT = "http://localhost:3001";
+
+;// CONCATENATED MODULE: ./graphql/apollo-client.ts
+
+
+const createApolloClient = ()=>{
+    return new client_.ApolloClient({
+        uri: END_POINT,
+        cache: new client_.InMemoryCache()
+    });
+};
+
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
-/***/ ((module) => {
+/***/ 245:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-module.exports = require("react/jsx-dev-runtime");
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "B": () => (/* binding */ GetAllProductsQuery),
+/* harmony export */   "y": () => (/* binding */ GetProductQuery)
+/* harmony export */ });
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9114);
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);
+
+const GetProductQuery = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+  query GetProduct($id: ID!) {
+    Product(id: $id) {
+      id
+      name
+      power
+      description
+      price
+      quantity
+      brand
+      weight
+      height
+      width
+      length
+      model_code
+      colour
+      img_url
+    }
+  }
+`;
+const GetAllProductsQuery = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+  query GetAllProducts {
+    allProducts {
+      id
+      brand
+    }
+  }
+`;
+
 
 /***/ }),
 
-/***/ "graphql-request":
-/*!**********************************!*\
-  !*** external "graphql-request" ***!
-  \**********************************/
+/***/ 5075:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Home),
+/* harmony export */   "getServerSideProps": () => (/* binding */ getServerSideProps)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _graphql_apollo_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3696);
+/* harmony import */ var _graphql_queries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(245);
+
+
+
+
+async function getServerSideProps() {
+    const client = (0,_graphql_apollo_client__WEBPACK_IMPORTED_MODULE_2__/* .createApolloClient */ .n)();
+    const { data  } = await client.query({
+        query: _graphql_queries__WEBPACK_IMPORTED_MODULE_3__/* .GetAllProductsQuery */ .B
+    });
+    return {
+        props: {
+            allProducts: data.allProducts
+        }
+    };
+}
+function Home({ allProducts  }) {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+            children: allProducts.map((product)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
+                        href: `/product/${product.id}`,
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
+                            children: product.brand
+                        })
+                    })
+                }, product.id))
+        })
+    });
+};
+
+
+/***/ }),
+
+/***/ 9114:
 /***/ ((module) => {
 
-module.exports = import("graphql-request");;
+module.exports = require("@apollo/client");
+
+/***/ }),
+
+/***/ 3280:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/app-router-context.js");
+
+/***/ }),
+
+/***/ 2796:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
+
+/***/ }),
+
+/***/ 4014:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
+
+/***/ }),
+
+/***/ 8524:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/is-plain-object.js");
+
+/***/ }),
+
+/***/ 8020:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/mitt.js");
+
+/***/ }),
+
+/***/ 4406:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/page-path/denormalize-page-path.js");
+
+/***/ }),
+
+/***/ 4964:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router-context.js");
+
+/***/ }),
+
+/***/ 1751:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
+/***/ 299:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/format-next-pathname-info.js");
+
+/***/ }),
+
+/***/ 3938:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
+
+/***/ }),
+
+/***/ 9565:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+
+/***/ }),
+
+/***/ 5789:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/get-next-pathname-info.js");
+
+/***/ }),
+
+/***/ 1428:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+
+/***/ }),
+
+/***/ 8854:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
+
+/***/ }),
+
+/***/ 1292:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
+
+/***/ }),
+
+/***/ 4567:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/path-has-prefix.js");
+
+/***/ }),
+
+/***/ 979:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
+
+/***/ }),
+
+/***/ 3297:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
+
+/***/ }),
+
+/***/ 6052:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
+
+/***/ }),
+
+/***/ 4226:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
+
+/***/ }),
+
+/***/ 5052:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+
+/***/ }),
+
+/***/ 9232:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/utils.js");
+
+/***/ }),
+
+/***/ 6689:
+/***/ ((module) => {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ 997:
+/***/ ((module) => {
+
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -50,7 +303,7 @@ module.exports = import("graphql-request");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/index.tsx"));
+var __webpack_exports__ = __webpack_require__.X(0, [952,664], () => (__webpack_exec__(5075)));
 module.exports = __webpack_exports__;
 
 })();

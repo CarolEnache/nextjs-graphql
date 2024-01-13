@@ -2,11 +2,24 @@
 ### Do not make changes to this file directly
 
 
-type Framework {
-  id: ID
+type Product {
+  brand: String
+  colour: String
+  description: String
+  height: Int
+  id: ID!
+  img_url: String
+  length: Int
+  model_code: String
   name: String
+  power: String
+  price: Int
+  quantity: Int
+  weight: Int
+  width: Int
 }
 
 type Query {
-  frameworks: [Framework]
+  Product(id: ID!): Product
+  allProducts: [Product]
 }

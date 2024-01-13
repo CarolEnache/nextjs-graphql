@@ -28,9 +28,21 @@ export interface NexusGenScalars {
 }
 
 export interface NexusGenObjects {
-  Framework: { // root type
-    id?: string | null; // ID
+  Product: { // root type
+    brand?: string | null; // String
+    colour?: string | null; // String
+    description?: string | null; // String
+    height?: number | null; // Int
+    id: string; // ID!
+    img_url?: string | null; // String
+    length?: number | null; // Int
+    model_code?: string | null; // String
     name?: string | null; // String
+    power?: string | null; // String
+    price?: number | null; // Int
+    quantity?: number | null; // Int
+    weight?: number | null; // Int
+    width?: number | null; // Int
   }
   Query: {};
 }
@@ -46,26 +58,57 @@ export type NexusGenRootTypes = NexusGenObjects
 export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
 
 export interface NexusGenFieldTypes {
-  Framework: { // field return type
-    id: string | null; // ID
+  Product: { // field return type
+    brand: string | null; // String
+    colour: string | null; // String
+    description: string | null; // String
+    height: number | null; // Int
+    id: string; // ID!
+    img_url: string | null; // String
+    length: number | null; // Int
+    model_code: string | null; // String
     name: string | null; // String
+    power: string | null; // String
+    price: number | null; // Int
+    quantity: number | null; // Int
+    weight: number | null; // Int
+    width: number | null; // Int
   }
   Query: { // field return type
-    frameworks: Array<NexusGenRootTypes['Framework'] | null> | null; // [Framework]
+    Product: NexusGenRootTypes['Product'] | null; // Product
+    allProducts: Array<NexusGenRootTypes['Product'] | null> | null; // [Product]
   }
 }
 
 export interface NexusGenFieldTypeNames {
-  Framework: { // field return type name
+  Product: { // field return type name
+    brand: 'String'
+    colour: 'String'
+    description: 'String'
+    height: 'Int'
     id: 'ID'
+    img_url: 'String'
+    length: 'Int'
+    model_code: 'String'
     name: 'String'
+    power: 'String'
+    price: 'Int'
+    quantity: 'Int'
+    weight: 'Int'
+    width: 'Int'
   }
   Query: { // field return type name
-    frameworks: 'Framework'
+    Product: 'Product'
+    allProducts: 'Product'
   }
 }
 
 export interface NexusGenArgTypes {
+  Query: {
+    Product: { // args
+      id: string; // ID!
+    }
+  }
 }
 
 export interface NexusGenAbstractTypeMembers {

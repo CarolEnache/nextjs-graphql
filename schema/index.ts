@@ -1,9 +1,9 @@
 import { makeSchema } from 'nexus';
-import * as QueryTypes from './Query';
+import * as typeDefs from './typeDefs';
 import path from 'path';
 
 const schema = makeSchema({
-  types: [QueryTypes],
+  types: [typeDefs],
   outputs: {
     typegen: path.join(process.cwd(), 'generated/nexus-typegen.ts'),
     schema: path.join(process.cwd(), 'generated/schema.graphql'),
