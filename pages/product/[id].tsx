@@ -1,6 +1,11 @@
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
 import { GetProductQuery } from '../../graphql/queries';
+import styled from 'styled-components';
+
+const Heading = styled.h1`
+  color: red;
+`;
 
 export default function ProductPage() {
   const router = useRouter();
@@ -18,7 +23,7 @@ export default function ProductPage() {
 
   return (
     <div>
-      <h1>{Product?.name}</h1>
+      <Heading>{Product?.name}</Heading>
       {/* Render other product details */}
     </div>
   );
