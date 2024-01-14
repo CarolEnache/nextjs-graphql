@@ -42,8 +42,8 @@ export const Hero = ({
                 onClick={() =>
                   !minimumQuantity && setCurrentQuantity(currentQuantity - 1)
                 }
-                minimumQuantity={minimumQuantity}
-                decrement
+                $minimumQuantity={minimumQuantity}
+                $decrement
               >
                 -
               </QuantityButton>

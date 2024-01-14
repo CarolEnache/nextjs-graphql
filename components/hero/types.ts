@@ -9,8 +9,8 @@ export type HeroProps = {
 
 export type QuantityButtonProps = {
   onClick: () => void;
-  decrement?: boolean;
-  minimumQuantity?: boolean;
+  $decrement?: boolean;
+  $minimumQuantity?: boolean;
 }
 
 export type ProductImageProps = {
