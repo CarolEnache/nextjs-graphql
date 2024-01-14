@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import { createApolloClient } from "../graphql/apollo-client";
 import { GetAllProductsQuery } from '../graphql/queries';
+import { Home } from '../styles/globals';
 
 export async function getServerSideProps() {
   const client = createApolloClient();
@@ -14,18 +15,16 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({ allProducts }) {
+export default function HomePage({ allProducts }) {
   return (
-    <div>
-      <div>
-        {allProducts.map((product) => (
-          <div key={product.id}>
-            <Link href={`/product/${product.id}`}>
-              <a>{product.brand}</a>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+    <Home>
+      {allProducts.map((product) => (
+        <div key={product.id}>
+          <Link href={`/product/${product.id}`}>
+            <p>{product.brand}</p>
+          </Link>
+        </div>
+      ))}
+    </Home>
   )
 }

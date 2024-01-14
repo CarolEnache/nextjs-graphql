@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useQuery } from '@apollo/client';
-import { GetProductQuery } from '../../graphql/queries';
-import styled from 'styled-components';
 
-const Heading = styled.h1`
-  color: red;
-`;
+import { GetProductQuery } from '../../graphql/queries';
+import { Header } from '../../components/header';
+import { Hero } from '../../components/hero';
+import { Description } from '../../components/description';
+import { Specifications } from '../../components/specifications';
 
 export default function ProductPage() {
+  const [currentQuantity, setCurrentQuantity] = useState(1);
+  const [basketQuantity, setBasketQuantity] = useState(0);
   const router = useRouter();
   const { id } = router.query;
 
@@ -22,9 +25,16 @@ export default function ProductPage() {
   const Product = data?.Product;
 
   return (
-    <div>
-      <Heading>{Product?.name}</Heading>
-      {/* Render other product details */}
-    </div>
+    <>
+      <Header basketQuantity={basketQuantity} />
+      <Hero
+        product={Product}
+        currentQuantity={currentQuantity}
+        setCurrentQuantity={setCurrentQuantity}
+        setBasketQuantity={setBasketQuantity}
+      />
+      <Description description={Product?.description} />
+      <Specifications product={Product} />
+    </>
   );
 }
