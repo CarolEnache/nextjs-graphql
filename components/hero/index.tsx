@@ -46,7 +46,7 @@ export const Hero = ({
             >
               -
             </QuantityButton>
-            <Quantity>{currentQuantity}</Quantity>
+            <Quantity title='Current quantity'>{currentQuantity}</Quantity>
             <QuantityButton
               onClick={() => setCurrentQuantity(currentQuantity + 1)}
             >
@@ -56,7 +56,7 @@ export const Hero = ({
         </QuantityCounter>
       </QuantityCounterWrapper>
       <Button onClick={() => setBasketQuantity(currentQuantity)}>
-        Add to basket
+        Add to cart
       </Button>
     </HeroWrapper>
   );

@@ -71,7 +71,7 @@ export const QuantityButtonsWrapper = styled.div`
   align-items: center;
 `;
 
-export const Quantity = styled.p`
+export const Quantity = styled.span`
   padding: 0 0.5rem;
   margin: 0;
 `;

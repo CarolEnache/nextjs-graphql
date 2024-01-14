@@ -7,6 +7,7 @@ import { Header } from '../../components/header';
 import { Hero } from '../../components/hero';
 import { Description } from '../../components/description';
 import { Specifications } from '../../components/specifications';
+import { Footer } from '../../components/footer';
 
 export default function ProductPage() {
   const [currentQuantity, setCurrentQuantity] = useState(1);
@@ -35,6 +36,7 @@ export default function ProductPage() {
       />
       <Description description={Product?.description} />
       <Specifications product={Product} />
+      <Footer />
     </>
   );
 }
