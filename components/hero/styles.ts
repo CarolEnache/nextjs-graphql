@@ -11,6 +11,11 @@ export const ProductImageWrapper = styled.div`
   border-radius: 5%;
   align-self: center;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    align-self: auto;
+  }
+
 `;
 
 export const ProductImage = styled.div<ProductImageProps>`
@@ -90,4 +95,9 @@ export const HeroWrapper = styled.div`
   padding-bottom: ${spacing.s8};
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `;
