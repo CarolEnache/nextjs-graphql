@@ -20,7 +20,7 @@ export default function HomePage({ allProducts }) {
     <Home>
       {allProducts.map((product) => (
         <div key={product.id}>
-          Please click in the brand to see the product details
+          Please click on the brand to see the product details
           <Link href={`/product/${product.id}`}>
             <h1>{product.brand}</h1>
           </Link>
