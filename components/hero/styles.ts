@@ -3,7 +3,7 @@ import { ProductImageProps, QuantityButtonProps } from './types';
 import { colors, fontSizes, spacing } from '../../styles/globals';
 
 const imageWIth = 350;
-const imageHeight = 418;
+const imageHeight = 412;
 
 export const ProductImageWrapper = styled.div`
   height: ${imageHeight}px;
